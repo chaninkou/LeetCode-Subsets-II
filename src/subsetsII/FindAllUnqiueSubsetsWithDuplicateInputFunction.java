@@ -11,7 +11,7 @@ public class FindAllUnqiueSubsetsWithDuplicateInputFunction {
 		// Contain total of all subset
 		List<List<Integer>> powerSet = new ArrayList<>();
 
-		// Sort the array first
+		// Need to be sorted since contain duplicates input
 		Arrays.sort(nums);
 
 		// Backtracking with 0 as starting point, pass in empty arraylist
@@ -30,6 +30,7 @@ public class FindAllUnqiueSubsetsWithDuplicateInputFunction {
 			// Skip duplicates
 			// If i > start, that means it is going to have the same length as
 			// the previous set and then we check if they are the same
+			// we will not skip if i == start
 			if (i > start && nums[i] == nums[i - 1]) {
 				continue;
 			}
