@@ -30,10 +30,11 @@ public class FindAllUnqiueSubsetsWithDuplicateInputFunction {
 			// Skip duplicates
 			// If i > start, that means it is going to have the same length as
 			// the previous set and then we check if they are the same
-			// we will not skip if i == start
+			// we will not skip if i == start, since it will give us overflow
 			if (i > start && nums[i] == nums[i - 1]) {
 				continue;
 			}
+			
 			// Update the tempList
 			tempList.add(nums[i]);
 
