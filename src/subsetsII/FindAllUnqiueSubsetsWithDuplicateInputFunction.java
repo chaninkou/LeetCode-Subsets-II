@@ -6,12 +6,11 @@ import java.util.List;
 
 public class FindAllUnqiueSubsetsWithDuplicateInputFunction {
 	// Contain duplicate subsets
-	// Need to be sorted, unless it does not include duplicate
 	public List<List<Integer>> subsetsWithDup(int[] nums) {
 		// Contain total of all subset
 		List<List<Integer>> powerSet = new ArrayList<>();
 
-		// Need to be sorted since contain duplicates input
+		// Need to be sorted since it contains duplicates input
 		Arrays.sort(nums);
 
 		// Backtracking with 0 as starting point, pass in empty arraylist
@@ -37,9 +36,8 @@ public class FindAllUnqiueSubsetsWithDuplicateInputFunction {
 			
 			// Update the tempList
 			tempList.add(nums[i]);
-
-			// So we go down the list until we reach i = nums.length which will
-			// stop the loop
+			
+			// Add the next index
 			backtrack(powerSet, tempList, nums, i + 1);
 
 			// Remove the last element of the tempList
