@@ -7,7 +7,7 @@ import java.util.List;
 public class FindAllUnqiueSubsetsWithDuplicateInputFunction {
 	// Contain duplicate subsets
 	public List<List<Integer>> subsetsWithDup(int[] nums) {
-		// Contain total of all subset
+		// Contain total of all subsets
 		List<List<Integer>> powerSet = new ArrayList<>();
 
 		// Need to be sorted since it contains duplicates input
